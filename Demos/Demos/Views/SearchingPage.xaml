@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.SearchingPage"
+             xmlns:xc="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:models="clr-namespace:Demos.Models"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             x:DataType="viewmodels:SearchingViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:SearchingViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xc:EventToCommandBehavior EventName="Appearing" Command="{Binding OnAppearingCommand}" />
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SearchingBar" Placeholder="Input any keyword" Text="{Binding SearchText}">
+                <SearchBar.Behaviors>
+                    <xc:EventToCommandBehavior EventName="TextChanged" Command="{Binding TextChangedCommand}" />
+                </SearchBar.Behaviors>
+            </SearchBar>
+            
+            <CollectionView ItemsSource="{Binding Musics}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Music">
+                        <Grid Padding="20,5">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Id}"/>
+                                <StackLayout Spacing="0">
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Artist}" />
+                                    <Label Text="{Binding ReleaseDate}" />
+                                </StackLayout>
+                              
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

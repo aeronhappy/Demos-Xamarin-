@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.PastorPage"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             x:DataType="viewmodels:CarouselViewModel"
+             xmlns:models="clr-namespace:Demos.Models"
+             Title="Pastor">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CarouselViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Pastors}" 
+                        SelectionMode="Single" 
+                        SelectedItem="{Binding CurrentPastor}" 
+                        SelectionChangedCommand="{Binding TappedCommand}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Pastor">
+                    <StackLayout Margin="10" Padding="10">
+                        <Label Text="{Binding FullName}" />
+                        <Label Text="{Binding Church}" />
+                        <Label Text="{Binding Message}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Demos.Views.CarouselPage"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             x:DataType="viewmodels:CarouselViewModel"
+             xmlns:models="clr-namespace:Demos.Models"        
+             Title="{Binding Title}"
+             x:Name="CarouselDemoPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CarouselViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" Margin="20"/>
+            
+            <CarouselView ItemsSource="{Binding Pastors}" 
+                          CurrentItem="{Binding CurrentPastor}"                
+                          PeekAreaInsets="50" 
+                          IndicatorView="indicatorView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Pastor">
+                        <StackLayout Padding="15" xct:TouchEffect.NativeAnimation="True" xct:TouchEffect.Command="{Binding Source={x:Reference CarouselDemoPage}, Path=BindingContext.TappedCommand}">
+                            <Label Text="{Binding FullName}" FontAttributes="Bold"/>
+                            <Image Source="{Binding ImageProfile}" />
+                            <Label Text="{Binding Church}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.RegistrationPage"
+             Title="Signup"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             x:DataType="viewmodels:RegisterViewModel">
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding OnAppearingCommand}" />
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Entry Placeholder="UserName" Text="{Binding UserName}" />
+            <Entry Placeholder="Email" Keyboard="Email" Text="{Binding Email}"/>
+            <Entry IsPassword="True" Placeholder="Password" Text="{Binding Password}"/>
+            <Button Text="Signup" Command="{Binding RegisterCommand}"/>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

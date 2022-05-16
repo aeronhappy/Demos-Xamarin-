@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.CoolPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             xmlns:models="clr-namespace:Demos.Models"
+             x:DataType="viewmodels:CoolViewModel"
+             Background="blue">
+
+
+    <ContentPage.BindingContext>
+        <viewmodels:CoolViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding OnAppearingCommand1}" />
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+        <StackLayout Padding="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Cool.Version.verse}" TextColor="Black"  />
+            <Image Source="{Binding Cool.Version.filename}"   />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

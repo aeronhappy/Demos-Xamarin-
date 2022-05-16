@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.PastorInfoPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:Demos.ViewModels"
+             x:DataType="viewmodels:PastorInfoViewModel"
+             xmlns:models="clr-namespace:Demos.Models"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <viewmodels:PastorInfoViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}" />
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Pastor.FullName}" />
+            <Label Text="{Binding Pastor.Church}" />
+            <Image Source="{Binding Pastor.ImageProfile}" />
+            <Label Text="{Binding Pastor.Message}" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Previews" BackgroundColor="Red" Margin="5,0" HorizontalOptions="StartAndExpand" Command="{Binding PreviewsCommand}"/>
+                <Button Text="Facebook"/>
+                <Button Text="Youtube" />
+                <Button Text="Next" BackgroundColor="Red" HorizontalOptions="EndAndExpand" Margin="5, 0" Command="{Binding NextCommand}"/>
+            </StackLayout>
+            <Label FontAttributes="Bold" Text="Books" />
+            <CollectionView ItemsSource="{Binding Pastor.Books}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Book">
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Title}" />
+                            <Label Text="{Binding YearOfPublication}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demos.Views.BookInfoPage"
+             xmlns:viewmodel="clr-namespace:Demos.ViewModels"
+             xmlns:models="clr-namespace:Demos.Models"
+             x:DataType="viewmodel:BookInfoViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="Book Information">
+
+    <ContentPage.BindingContext>
+        <viewmodel:BookInfoViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}" />
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Book.Id}" />
+            <Label Text="{Binding Book.Title}" />
+            <Label Text="{Binding Book.YearOfPublication}" />
+            <Button Text="Next" Command="{Binding NextCommand}"/>
+            <Button Text="Previous" Command="{Binding PreviousCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
