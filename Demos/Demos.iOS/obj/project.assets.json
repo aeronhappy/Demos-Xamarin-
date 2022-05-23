@@ -1514,11 +1514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Demos\\Demos\\Demos.iOS\\Demos.iOS.csproj",
+      "projectUniqueName": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.iOS\\Demos.iOS.csproj",
       "projectName": "Demos.iOS",
-      "projectPath": "E:\\Github\\Demos\\Demos\\Demos.iOS\\Demos.iOS.csproj",
+      "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.iOS\\Demos.iOS.csproj",
       "packagesPath": "C:\\Users\\iCHAMPION\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Demos\\Demos\\Demos.iOS\\obj\\",
+      "outputPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1541,8 +1541,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj": {
-              "projectPath": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj"
+            "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj": {
+              "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj"
             }
           }
         }

@@ -32,7 +32,7 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            ApiHelper.InitializeHttpClient();
+          
             IsBusy = true;
 
             //Kunwari matagal ang api haha

@@ -13,7 +13,7 @@ namespace Demos
             InitializeComponent();
             Routing.RegisterRoute(nameof(PastorInfoPage), typeof(PastorInfoPage));
             Routing.RegisterRoute(nameof(BookInfoPage), typeof(BookInfoPage));
- 
+
         }
 
        

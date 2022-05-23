@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Github\\Demos\\Demos\\Demos.Android\\Demos.Android.csproj": {}
+    "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\Demos.Android.csproj": {}
   },
   "projects": {
-    "E:\\Github\\Demos\\Demos\\Demos.Android\\Demos.Android.csproj": {
+    "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\Demos.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\Demos\\Demos\\Demos.Android\\Demos.Android.csproj",
+        "projectUniqueName": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\Demos.Android.csproj",
         "projectName": "Demos.Android",
-        "projectPath": "E:\\Github\\Demos\\Demos\\Demos.Android\\Demos.Android.csproj",
+        "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\Demos.Android.csproj",
         "packagesPath": "C:\\Users\\iCHAMPION\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\Demos\\Demos\\Demos.Android\\obj\\",
+        "outputPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj": {
-                "projectPath": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj"
+              "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj": {
+                "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj": {
+    "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj",
+        "projectUniqueName": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj",
         "projectName": "Demos",
-        "projectPath": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj",
+        "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj",
         "packagesPath": "C:\\Users\\iCHAMPION\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\Demos\\Demos\\Demos\\obj\\",
+        "outputPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

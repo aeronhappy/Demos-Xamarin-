@@ -15,6 +15,7 @@ namespace Demos
             InitializeComponent();
             DependencyService.Register<IDataRepository, MockPastorRepository>();
             DependencyService.Register<IHttpClientRepository, HttpClientRepository>();
+            DependencyService.Register<IWordofthedayRepository, HttpWordofthedayRepository>();
             MainPage = new AppShell();
         }
 

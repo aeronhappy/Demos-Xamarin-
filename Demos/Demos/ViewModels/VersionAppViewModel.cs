@@ -32,7 +32,8 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            ApiHelper.InitializeHttpClient();
+          
+
             VersionApp = await httpClientVersion.GetVersion();
             //IsBusy = true;
 

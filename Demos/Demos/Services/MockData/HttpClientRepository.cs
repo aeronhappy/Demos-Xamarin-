@@ -19,7 +19,7 @@ namespace Demos.Services.MockData
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "WebAPI/newapi/test/fetchusers.php");
 
                 //Sending the request
-                using (HttpResponseMessage response = await ApiHelper.Client.SendAsync(request))
+                using (HttpResponseMessage response = await ApiHelper.AzureClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
                     {
@@ -49,7 +49,7 @@ namespace Demos.Services.MockData
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "test.php");
 
                 //Sending the request
-                using (HttpResponseMessage response = await ApiHelper.Client.SendAsync(request))
+                using (HttpResponseMessage response = await ApiHelper.AzureClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
                     {
@@ -81,7 +81,7 @@ namespace Demos.Services.MockData
                 string stringContent = JsonConvert.SerializeObject(credentials);
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "WebAPI/newapi/test/register.php");
                 request.Content = new StringContent(stringContent, Encoding.UTF8, "application/json");
-                using (HttpResponseMessage response = await ApiHelper.Client.SendAsync(request)) 
+                using (HttpResponseMessage response = await ApiHelper.AzureClient.SendAsync(request)) 
                 {
                     HttpContent content = response.Content;
                     string contentAsString = await content.ReadAsStringAsync();
@@ -106,7 +106,7 @@ namespace Demos.Services.MockData
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "theversioncont.php");
 
                 //Sending the request
-                using (HttpResponseMessage response = await ApiHelper.Client.SendAsync(request))
+                using (HttpResponseMessage response = await ApiHelper.AzureClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
                     {
@@ -138,7 +138,7 @@ namespace Demos.Services.MockData
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "cool.php");
 
                 //Sending the request
-                using (HttpResponseMessage response = await ApiHelper.Client.SendAsync(request))
+                using (HttpResponseMessage response = await ApiHelper.AzureClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
                     {

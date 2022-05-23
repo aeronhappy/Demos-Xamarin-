@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj": {}
+    "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj": {}
   },
   "projects": {
-    "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj": {
+    "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj",
+        "projectUniqueName": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj",
         "projectName": "Demos",
-        "projectPath": "E:\\Github\\Demos\\Demos\\Demos\\Demos.csproj",
+        "projectPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\Demos.csproj",
         "packagesPath": "C:\\Users\\iCHAMPION\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\Demos\\Demos\\Demos\\obj\\",
+        "outputPath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

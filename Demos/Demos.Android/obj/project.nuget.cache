@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yJTgWT2z3VhTG1bEo8etX1wOiNMavMuac7iuE6EMeVZAjXCNSEr4CBIvy6sjILbgZdsOFhh7deLwkDYeEzrsxw==",
+  "dgSpecHash": "egfMfCk3I/Y8LQ0RDuGH+8Q+gkeJG15WNGm4kiMx/jSb/iWzLKY3nxy9uXO/7tzOs1MYiyh37tAgkXDs76yVIA==",
   "success": true,
-  "projectFilePath": "E:\\Github\\Demos\\Demos\\Demos.Android\\Demos.Android.csproj",
+  "projectFilePath": "E:\\Github\\Demos-Xamarin-\\Demos\\Demos.Android\\Demos.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iCHAMPION\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\iCHAMPION\\.nuget\\packages\\plugin.mediamanager\\1.1.0\\plugin.mediamanager.1.1.0.nupkg.sha512",

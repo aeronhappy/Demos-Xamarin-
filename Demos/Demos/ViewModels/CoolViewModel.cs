@@ -32,7 +32,6 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            ApiHelper.InitializeHttpClient();
             Cool = await httpClientVersion.GetCool();
         }
     }

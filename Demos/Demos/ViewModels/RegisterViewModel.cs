@@ -48,7 +48,6 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            ApiHelper.InitializeClient();
         }
 
         private async Task RegisterAsync()

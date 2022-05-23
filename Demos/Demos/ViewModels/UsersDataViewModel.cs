@@ -33,8 +33,6 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            //Itong pag initialize kuya aeron pag bukas na pagbukas ng app dapat nilalagay hehe nilagay kolang dito
-            ApiHelper.InitializeClient();
             try
             {
                 Accounts = await clientRepository.GetAccountsAsync();

@@ -106,6 +106,9 @@
     <FlyoutItem Title="Music" Icon="icon_about.png">
         <ShellContent Route="MusicPage" ContentTemplate="{DataTemplate local:Music}" />
     </FlyoutItem>
+    <FlyoutItem Title="Word of the day!">
+        <ShellContent Route="Wordoftheday" ContentTemplate="{DataTemplate local:Wordoftheday}" />
+    </FlyoutItem>
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
 
 

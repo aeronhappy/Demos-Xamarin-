@@ -60,8 +60,7 @@ namespace Demos.ViewModels
 
         private async Task OnAppearingAsync()
         {
-            ApiHelper.InitializeAzure("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhcmpheW1hbGlnYXlhOTk5QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNDMyMDdhZWYtOWU0Mi00NjZiLTlkOTgtNTc2ZDQyYTJiNjhiIiwiZXhwIjoxNjQ1NTk2NDA2LCJpc3MiOiJodHRwczovL3RoZW9uZWJpYmxlYXBwLmF6dXJld2Vic2l0ZXMubmV0IiwiYXVkIjoiaHR0cHM6Ly90aGVvbmViaWJsZWFwcC5henVyZXdlYnNpdGVzLm5ldCJ9.wyKx5nYCdPukct_OWVVHS_kS9xQXx1C8CTgj7aHoJKg");
-
+            
             PagedCommunity = await client.GetCommunity(PageNumber, PageSize);
             Communities = PagedCommunity.Data;
         }
